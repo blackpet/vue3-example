@@ -39,7 +39,8 @@ defineExpose({
 
 <template>
 <Backdrop ref="backdrop">
-  <div :class="'modal ' + props.classes">
+  <div :class="'modal ' + props.classes"
+       v-click-outside="close">
     <div class="h-8 py-2 pl-4 pr-12 text-center text-xl sm:text-2xl font-medium">
       {{ props.title }}
     </div>
